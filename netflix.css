@@ -1,0 +1,186 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.navbar {
+    background-color: rgba(227, 14, 14, 0.849);
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust height as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.hero {
+    background-image: url('netflix1.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.hero-content {
+    text-align: center;
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 1s forwards; /* Apply fadeIn animation */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #ff0000;
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeInModal 0.5s forwards; /* Apply fadeInModal animation */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(360deg); /* Rotate on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply styles to the section headings */
+.trending h2,
+.recommended h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff; /* Ensure the text color is visible */
+}
+
+/* Apply styles to the content within the sections */
+.trending .content,
+.recommended .content {
+    display: flex;
+    justify-content: space-between;
+    color: #fff; /* Ensure the text color is visible */
+}
+
+.trending .content h3,
+.recommended .content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Adjust background colors as needed */
+.trending {
+    background-color: #111;
+    padding: 50px 0;
+}
+
+.recommended {
+    background-color: #222;
+    padding:30px 0;
+}
